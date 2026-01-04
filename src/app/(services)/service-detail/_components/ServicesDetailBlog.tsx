@@ -13,7 +13,7 @@ const ServicesDetailBlog = () => {
     return (
         <ul>
             {servicedetails.map((item, i) => (
-                <li key={i} className={item.columnstand}><Link href="#" scroll={false}>{item.title}</Link></li>
+                <li key={i} className={"m-r25"}><Link href="#" scroll={false}>{item.title}</Link></li>
             ))}
         </ul>
     )
