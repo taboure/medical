@@ -1,48 +1,58 @@
-import Link from "next/link"
-import {IMAGES, SVGICONS} from "./theme"
-import Image, {StaticImageData} from "next/image"
+import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
+import { IMAGES, SVGICONS } from "./theme";
 
 // layout
 // header
 export const headerinfo = [
-    {
-        image: IMAGES.svgicon1,
-        title: 'Nous contacter',
-        paragraph: <Link href="tel:+221776600670" className="text-secondary">+221 77 660 06 70</Link>,
-    },
-    {
-        image: IMAGES.svgicon2,
-        title: 'Email',
-        paragraph: <Link href="mailto:sendocteurastuce@gmail.com"
-                         className="text-secondary">sendocteurastuce@gmail.com</Link>,
-    },
-    {
-        image: IMAGES.svgicon3,
-        title: 'Prendre rendez-vous',
-        paragraph: <span>Prendre rendez-vous<i className="feather icon-arrow-right"/></span>,
-    },
-    {image: IMAGES.svgicon4, title: 'Bien chez soi', paragraph: '24h/24',},
-    //{ image: IMAGES.svgicon5, title: 'Payment', paragraph: <span>Pay Online <i className="feather icon-arrow-right" /></span>, },
-    //{ image: IMAGES.svgicon6, title: 'My Cart', paragraph: '2 Items', },
-]
-
+  {
+    image: IMAGES.svgicon1,
+    title: "Nous contacter",
+    paragraph: (
+      <Link href="tel:+221776600670" className="text-secondary">
+        +221 77 660 06 70
+      </Link>
+    ),
+  },
+  {
+    image: IMAGES.svgicon2,
+    title: "Email",
+    paragraph: (
+      <Link href="mailto:sendocteurastuce@gmail.com" className="text-secondary">
+        sendocteurastuce@gmail.com
+      </Link>
+    ),
+  },
+  {
+    image: IMAGES.svgicon3,
+    title: "Prendre rendez-vous",
+    paragraph: (
+      <span>
+        Prendre rendez-vous
+        <i className="feather icon-arrow-right" />
+      </span>
+    ),
+  },
+  { image: IMAGES.svgicon4, title: "Bien chez soi", paragraph: "24h/24" },
+  //{ image: IMAGES.svgicon5, title: 'Payment', paragraph: <span>Pay Online <i className="feather icon-arrow-right" /></span>, },
+  //{ image: IMAGES.svgicon6, title: 'My Cart', paragraph: '2 Items', },
+];
 
 export type HeaderContentItem = {
-    title: string;
-    to: string;
-    image?: string | StaticImageData;
+  title: string;
+  to: string;
+  image?: string | StaticImageData;
 };
 
 export type HeaderItem = {
-    title: string;
-    to?: string;
-    classChange?: string;
-    content?: HeaderContentItem[];
+  title: string;
+  to?: string;
+  classChange?: string;
+  content?: HeaderContentItem[];
 };
 
-
 export const headerdata: HeaderItem[] = [
-    /* {
+  /* {
         title: "Home",
         classChange: "has-mega-menu",
         content: [
@@ -76,478 +86,741 @@ export const headerdata: HeaderItem[] = [
         ],
     },*/
 
-    {
-        title: "Nos Services",
-        to: '#'
-        /*classChange: "sub-menu-down",
+  {
+    title: "Nos Services",
+    to: "#",
+    /*classChange: "sub-menu-down",
         content: [
             { title: "Services", to: "/services" },
             { title: "Service Detail", to: "/service-detail" },
         ],*/
-    },
-    {
-        title: "Bien Chez Soi",
-        to: '#'
-    },
-    {title: "Nous Contacter", to: "/contact-us",},
-]
+  },
+  {
+    title: "Bien Chez Soi",
+    to: "#",
+  },
+  { title: "Nous Contacter", to: "/contact-us" },
+];
 // footer
 export const footerdata1 = [
-    {
-        delay: '0.4s',
-        icon: <i className="feather icon-phone"/>,
-        title: 'Nous contacter',
-        paragraph: <Link href="tel:+221776600670" className="text-body">+221 77 660 06 70</Link>,
-    },
-    {
-        delay: '0.6s',
-        icon: <i className="feather icon-mail"/>,
-        title: 'Email',
-        paragraph: <Link href="mailto:info@example.com" className="text-body">sendocteurastuce@gmail.com</Link>,
-    },
-    {
-        delay: '0.8s',
-        icon: <i className="feather icon-clock"/>,
-        title: 'Nous sommes ouvert',
-        paragraph: "Lundi -Dimanche: 8:00 - 00:00",
-    },
-]
+  {
+    delay: "0.4s",
+    icon: <i className="feather icon-phone" />,
+    title: "Nous contacter",
+    paragraph: (
+      <Link href="tel:+221776600670" className="text-body">
+        +221 77 660 06 70
+      </Link>
+    ),
+  },
+  {
+    delay: "0.6s",
+    icon: <i className="feather icon-mail" />,
+    title: "Email",
+    paragraph: (
+      <Link href="mailto:info@example.com" className="text-body">
+        sendocteurastuce@gmail.com
+      </Link>
+    ),
+  },
+  {
+    delay: "0.8s",
+    icon: <i className="feather icon-clock" />,
+    title: "Nous sommes ouvert",
+    paragraph: "Lundi -Dimanche: 8:00 - 00:00",
+  },
+];
 export const footerdata2 = [
-    {
-        title: 'Nos Services',
-        span1: 'Soins d\'urgence',
-        span2: 'Bloc opératoire',
-        span3: 'Bilan de santé',
-        span4: 'Centre de diagnostic',
-        span5: 'Consultation externe',
-        link1: '/service-detail',
-        link2: '/service-detail',
-        link3: '/service-detail',
-        link4: '/service-detail',
-        link5: '/service-detail',
-        delay: '0.4s',
-    },
-    {
-        title: 'Liens Utiles',
-        span1: 'Politique de confidentialité',
-        span2: 'Conditions générales',
-        span3: 'Nous contacter',
-        span4: 'Dernières actualités',
-        span5: 'Plan du site',
-        link1: '#',
-        link2: '#',
-        link3: '/contact-us',
-        link4: '/blog-grid',
-        link5: '#',
-        delay: '0.6s',
-    },
-    {
-        title: 'Accès Rapide',
-        span1: 'À propos',
-        span2: 'Nos services',
-        span3: 'Notre équipe',
-        span4: 'Rendez-vous',
-        span5: 'Nous contacter',
-        link1: '/about-us',
-        link2: '/services',
-        link3: '/team',
-        link4: '/appointment',
-        link5: '/contact-us',
-        delay: '1.0s',
-    },
-]
+  {
+    title: "Nos Services",
+    span1: "Soins d'urgence",
+    span2: "Bloc opératoire",
+    span3: "Bilan de santé",
+    span4: "Centre de diagnostic",
+    span5: "Consultation externe",
+    link1: "/service-detail",
+    link2: "/service-detail",
+    link3: "/service-detail",
+    link4: "/service-detail",
+    link5: "/service-detail",
+    delay: "0.4s",
+  },
+  {
+    title: "Liens Utiles",
+    span1: "Politique de confidentialité",
+    span2: "Conditions générales",
+    span3: "Nous contacter",
+    span4: "Dernières actualités",
+    span5: "Plan du site",
+    link1: "#",
+    link2: "#",
+    link3: "/contact-us",
+    link4: "/blog-grid",
+    link5: "#",
+    delay: "0.6s",
+  },
+  {
+    title: "Accès Rapide",
+    span1: "À propos",
+    span2: "Nos services",
+    span3: "Notre équipe",
+    span4: "Rendez-vous",
+    span5: "Nous contacter",
+    link1: "/about-us",
+    link2: "/services",
+    link3: "/team",
+    link4: "/appointment",
+    link5: "/contact-us",
+    delay: "1.0s",
+  },
+];
 // pages
 // testimonial
 export const testidata = [
-    {treat: "Optimal Treatment", delay: '0.2s', title: 'Kenneth Fong', position: 'Patient', image: IMAGES.testimonial2},
-    {treat: "Best Treatment", delay: '0.4s', title: 'Danial Frankie', position: 'Patient', image: IMAGES.testimonial3},
-    {treat: "Recommended Care", delay: '0.6s', title: 'Rihana Roy', position: 'Patient', image: IMAGES.testimonial4},
-    {
-        treat: "First-Class Treatment",
-        delay: '0.8s',
-        title: 'Kenneth Fong',
-        position: 'Patient',
-        image: IMAGES.testimonial5
-    },
-]
+  {
+    treat: "Optimal Treatment",
+    delay: "0.2s",
+    title: "Kenneth Fong",
+    position: "Patient",
+    image: IMAGES.testimonial2,
+  },
+  {
+    treat: "Best Treatment",
+    delay: "0.4s",
+    title: "Danial Frankie",
+    position: "Patient",
+    image: IMAGES.testimonial3,
+  },
+  {
+    treat: "Recommended Care",
+    delay: "0.6s",
+    title: "Rihana Roy",
+    position: "Patient",
+    image: IMAGES.testimonial4,
+  },
+  {
+    treat: "First-Class Treatment",
+    delay: "0.8s",
+    title: "Kenneth Fong",
+    position: "Patient",
+    image: IMAGES.testimonial5,
+  },
+];
 export const testiswipeerdata2 = [
-    {image: IMAGES.testimonialsmall1, name: "Danial Frankie"},
-    {image: IMAGES.testimonialsmall2, name: "Esteban Serrano"},
-    {image: IMAGES.testimonialsmall3, name: "Rihana Roy"},
-]
-
+  { image: IMAGES.testimonialsmall1, name: "Danial Frankie" },
+  { image: IMAGES.testimonialsmall2, name: "Esteban Serrano" },
+  { image: IMAGES.testimonialsmall3, name: "Rihana Roy" },
+];
 
 export interface BlogItem {
-    image: any;
-    dealy: string;
-    title: string;
+  image: any;
+  dealy: string;
+  title: string;
 }
 
 // bloggrid
 export const blogdata: BlogItem[] = [
-    {image: IMAGES.blogoverlaylarge1, dealy: '0.1s', title: 'The Art of Managing Business and Patient Care.',},
-    {image: IMAGES.blogoverlaylarge2, dealy: '0.2s', title: 'Successful Transitional Rehab: More Than Just Exercise',},
-    {image: IMAGES.blogoverlaylarge3, dealy: '0.3s', title: 'What is Respite Care and Why is it Important?',},
-    {image: IMAGES.blogoverlaylarge4, dealy: '0.4s', title: 'The Art of Managing Business and Patient Care',},
-    {image: IMAGES.blogoverlaylarge5, dealy: '0.5s', title: 'Three Years Post Injury: Persistence and Progress',},
-    {image: IMAGES.blogoverlaylarge6, dealy: '0.6s', title: 'How Transitional Rehabilitation Aids in Stroke Recovery',},
-]
+  {
+    image: IMAGES.blogoverlaylarge1,
+    dealy: "0.1s",
+    title: "The Art of Managing Business and Patient Care.",
+  },
+  {
+    image: IMAGES.blogoverlaylarge2,
+    dealy: "0.2s",
+    title: "Successful Transitional Rehab: More Than Just Exercise",
+  },
+  {
+    image: IMAGES.blogoverlaylarge3,
+    dealy: "0.3s",
+    title: "What is Respite Care and Why is it Important?",
+  },
+  {
+    image: IMAGES.blogoverlaylarge4,
+    dealy: "0.4s",
+    title: "The Art of Managing Business and Patient Care",
+  },
+  {
+    image: IMAGES.blogoverlaylarge5,
+    dealy: "0.5s",
+    title: "Three Years Post Injury: Persistence and Progress",
+  },
+  {
+    image: IMAGES.blogoverlaylarge6,
+    dealy: "0.6s",
+    title: "How Transitional Rehabilitation Aids in Stroke Recovery",
+  },
+];
 export const blogdata2 = [
-    {image: IMAGES.bloggrid1, dealy: '0.1s', title: 'The Art of Managing Business and Patient Care.',},
-    {image: IMAGES.bloggrid2, dealy: '0.2s', title: 'Successful Transitional Rehab: More Than Just Exercise',},
-    {image: IMAGES.bloggrid3, dealy: '0.3s', title: 'What is Respite Care and Why is it Important?',},
-    {image: IMAGES.bloggrid4, dealy: '0.4s', title: 'The Art of Managing Business and Patient Care',},
-    {image: IMAGES.bloggrid5, dealy: '0.5s', title: 'Three Years Post Injury: Persistence and Progress',},
-    {image: IMAGES.bloggrid6, dealy: '0.6s', title: 'How Transitional Rehabilitation Aids in Stroke Recovery',},
-]
+  {
+    image: IMAGES.bloggrid1,
+    dealy: "0.1s",
+    title: "The Art of Managing Business and Patient Care.",
+  },
+  {
+    image: IMAGES.bloggrid2,
+    dealy: "0.2s",
+    title: "Successful Transitional Rehab: More Than Just Exercise",
+  },
+  {
+    image: IMAGES.bloggrid3,
+    dealy: "0.3s",
+    title: "What is Respite Care and Why is it Important?",
+  },
+  {
+    image: IMAGES.bloggrid4,
+    dealy: "0.4s",
+    title: "The Art of Managing Business and Patient Care",
+  },
+  {
+    image: IMAGES.bloggrid5,
+    dealy: "0.5s",
+    title: "Three Years Post Injury: Persistence and Progress",
+  },
+  {
+    image: IMAGES.bloggrid6,
+    dealy: "0.6s",
+    title: "How Transitional Rehabilitation Aids in Stroke Recovery",
+  },
+];
 // servicedetails
 export const servicedetails = [
-    {
-        title: 'Biopsie cytoponction',
-        desc: 'La biopsie par cytoponction est une technique médicale permettant de prélever des cellules ou des tissus pour analyse pathologique. Cette procédure minimalement invasive aide au diagnostic précis de diverses conditions médicales.'
-    },
-    {
-        title: 'Cardiologie',
-        desc: 'La cardiologie est la spécialité médicale qui étudie, diagnostique et traite les maladies du cœur et des vaisseaux sanguins. Nos cardiologues utilisent des technologies avancées pour assurer la santé cardiovasculaire de nos patients.'
-    },
-    {
-        title: 'Médecine Dentaire',
-        desc: 'Notre service de médecine dentaire offre des soins complets pour la santé bucco-dentaire. De la prévention aux traitements spécialisés, nos dentistes qualifiés assurent votre sourire et votre bien-être.'
-    },
-    {
-        title: 'Endocrinologie',
-        desc: "L'endocrinologie traite les troubles hormonaux et les maladies des glandes endocrines comme la thyroïde, le diabète et les déséquilibres hormonaux. Nos endocrinologues proposent des traitements personnalisés et un suivi régulier."
-    },
-    {
-        title: 'Ophtalmologie',
-        desc: "L'ophtalmologie est dédiée à la santé des yeux et de la vision. Nos ophtalmologues diagnostiquent et traitent les troubles oculaires avec des équipements de pointe pour préserver votre vue."
-    },
-    {
-        title: 'Neurologie',
-        desc: 'La neurologie se concentre sur le diagnostic et le traitement des maladies du système nerveux, incluant le cerveau, la moelle épinière et les nerfs périphériques. Nos neurologues offrent une expertise complète pour les troubles neurologiques.'
-    },
-    {
-        title: 'Orthopédie',
-        desc: "L'orthopédie traite les affections du système musculo-squelettique. De la traumatologie aux chirurgies reconstructives, nos orthopédistes utilisent des techniques modernes pour restaurer votre mobilité et soulager la douleur."
-    },
-    {
-        title: 'Analyse biologique',
-        desc: "Notre laboratoire d'analyses biologiques effectue une large gamme de tests diagnostiques avec précision et rapidité. Des analyses sanguines aux examens spécialisés, nous fournissons des résultats fiables pour un diagnostic précis."
-    },
+  {
+    title: "Endocrinologie",
+    desc: "L'endocrinologie traite les troubles hormonaux et les maladies des glandes endocrines comme la thyroïde, le diabète et les déséquilibres hormonaux. Nos endocrinologues proposent des traitements personnalisés et un suivi régulier.",
+  },
+  {
+    title: "Analyse biologique",
+    desc: "Notre laboratoire d'analyses biologiques effectue une large gamme de tests diagnostiques avec précision et rapidité. Des analyses sanguines aux examens spécialisés, nous fournissons des résultats fiables pour un diagnostic précis.",
+  },
+  {
+    title: "Cardiologie",
+    desc: "La cardiologie est la spécialité médicale qui étudie, diagnostique et traite les maladies du cœur et des vaisseaux sanguins. Nos cardiologues utilisent des technologies avancées pour assurer la santé cardiovasculaire de nos patients.",
+  },
+  {
+    title: "Médecine Dentaire",
+    desc: "Notre service de médecine dentaire offre des soins complets pour la santé bucco-dentaire. De la prévention aux traitements spécialisés, nos dentistes qualifiés assurent votre sourire et votre bien-être.",
+  },
+  {
+    title: "Ophtalmologie",
+    desc: "L'ophtalmologie est dédiée à la santé des yeux et de la vision. Nos ophtalmologues diagnostiquent et traitent les troubles oculaires avec des équipements de pointe pour préserver votre vue.",
+  },
+  {
+    title: "Neurologie",
+    desc: "La neurologie se concentre sur le diagnostic et le traitement des maladies du système nerveux, incluant le cerveau, la moelle épinière et les nerfs périphériques. Nos neurologues offrent une expertise complète pour les troubles neurologiques.",
+  },
+  {
+    title: "Orthopédie",
+    desc: "L'orthopédie traite les affections du système musculo-squelettique. De la traumatologie aux chirurgies reconstructives, nos orthopédistes utilisent des techniques modernes pour restaurer votre mobilité et soulager la douleur.",
+  },
+  {
+    title: "Biopsie cytoponction",
+    desc: "La biopsie par cytoponction est une technique médicale permettant de prélever des cellules ou des tissus pour analyse pathologique. Cette procédure minimalement invasive aide au diagnostic précis de diverses conditions médicales.",
+  },
 ];
 
 // teamdetail
 export const empolydata = [
-    {id: 1, delay: '0.2s', image: IMAGES.team1, title: "Nashid Martines", position: "Cardiac Surgery"},
-    {id: 2, delay: '0.4s', image: IMAGES.team2, title: "Emilio Duarte", position: "Pediatric Clinic"},
-    {id: 3, delay: '0.6s', image: IMAGES.team3, title: "Rihana Roy", position: "Gynecology"},
-    {id: 5, delay: '1.0s', image: IMAGES.team1, title: "Santiago Rivas", position: "Cardiac Surgery"},
-    {id: 6, delay: '1.2s', image: IMAGES.team2, title: "Danial Frankie", position: "Pediatric Clinic"},
-    {id: 4, delay: '0.8s', image: IMAGES.team4, title: "Esteban Serrano", position: "Neurology"},
-    {id: 7, delay: '1.4s', image: IMAGES.team3, title: "Roman Petrov", position: "Gynecology"},
-    {id: 8, delay: '1.6s', image: IMAGES.team4, title: "Kenneth Fong", position: "Neurology"},
-]
+  {
+    id: 1,
+    delay: "0.2s",
+    image: IMAGES.team1,
+    title: "Nashid Martines",
+    position: "Cardiac Surgery",
+  },
+  {
+    id: 2,
+    delay: "0.4s",
+    image: IMAGES.team2,
+    title: "Emilio Duarte",
+    position: "Pediatric Clinic",
+  },
+  {
+    id: 3,
+    delay: "0.6s",
+    image: IMAGES.team3,
+    title: "Rihana Roy",
+    position: "Gynecology",
+  },
+  {
+    id: 5,
+    delay: "1.0s",
+    image: IMAGES.team1,
+    title: "Santiago Rivas",
+    position: "Cardiac Surgery",
+  },
+  {
+    id: 6,
+    delay: "1.2s",
+    image: IMAGES.team2,
+    title: "Danial Frankie",
+    position: "Pediatric Clinic",
+  },
+  {
+    id: 4,
+    delay: "0.8s",
+    image: IMAGES.team4,
+    title: "Esteban Serrano",
+    position: "Neurology",
+  },
+  {
+    id: 7,
+    delay: "1.4s",
+    image: IMAGES.team3,
+    title: "Roman Petrov",
+    position: "Gynecology",
+  },
+  {
+    id: 8,
+    delay: "1.6s",
+    image: IMAGES.team4,
+    title: "Kenneth Fong",
+    position: "Neurology",
+  },
+];
 // component
 // alllocation
 export const locationdata = [
-    {delay: '0.2s', title: 'United State',},
-    {delay: '0.4s', title: 'Canada',},
+  { delay: "0.2s", title: "United State" },
+  { delay: "0.4s", title: "Canada" },
 ];
 // awards
 export const awardswiperdata = [
-    {image: IMAGES.logo1},
-    {image: IMAGES.logo2},
-    {image: IMAGES.logo3},
-    {image: IMAGES.logo1},
-    {image: IMAGES.logo2},
-    {image: IMAGES.logo3},
-]
+  { image: IMAGES.logo1 },
+  { image: IMAGES.logo2 },
+  { image: IMAGES.logo3 },
+  { image: IMAGES.logo1 },
+  { image: IMAGES.logo2 },
+  { image: IMAGES.logo3 },
+];
 export const awarddata = [
-    {delay: '0.5s', title: '2024',},
-    {delay: '0.6s', title: '2023',},
-    {delay: '0.7s', title: '2022',},
-    {delay: '0.8s', title: '2021',},
-    {delay: '0.9s', title: '2020',},
-    {delay: '1.0s', title: '2019',},
-    {delay: '1.1s', title: 'View All',},
-]
+  { delay: "0.5s", title: "2024" },
+  { delay: "0.6s", title: "2023" },
+  { delay: "0.7s", title: "2022" },
+  { delay: "0.8s", title: "2021" },
+  { delay: "0.9s", title: "2020" },
+  { delay: "1.0s", title: "2019" },
+  { delay: "1.1s", title: "View All" },
+];
 // clientswiper1
 export const clientswiperdata1 = [
-    {image: IMAGES.logomiddle1, delay: '0.1s',},
-    {image: IMAGES.logomiddle2, delay: '0.2s',},
-    {image: IMAGES.logomiddle3, delay: '0.3s',},
-    {image: IMAGES.logomiddle4, delay: '0.4s',},
-    {image: IMAGES.logomiddle1, delay: '0.5s',},
-    {image: IMAGES.logomiddle2, delay: '0.6s',},
-    {image: IMAGES.logomiddle3, delay: '0.7s',},
-    {image: IMAGES.logomiddle4, delay: '0.8s',},
-]
+  { image: IMAGES.logomiddle1, delay: "0.1s" },
+  { image: IMAGES.logomiddle2, delay: "0.2s" },
+  { image: IMAGES.logomiddle3, delay: "0.3s" },
+  { image: IMAGES.logomiddle4, delay: "0.4s" },
+  { image: IMAGES.logomiddle1, delay: "0.5s" },
+  { image: IMAGES.logomiddle2, delay: "0.6s" },
+  { image: IMAGES.logomiddle3, delay: "0.7s" },
+  { image: IMAGES.logomiddle4, delay: "0.8s" },
+];
 // clientswiper2
 export const clientswiperdata2 = [
-    {image: IMAGES.logosmall1, delay: '0.1s',},
-    {image: IMAGES.logosmall2, delay: '0.2s',},
-    {image: IMAGES.logosmall3, delay: '0.3s',},
-    {image: IMAGES.logosmall4, delay: '0.4s',},
-    {image: IMAGES.logosmall5, delay: '0.5s',},
-    {image: IMAGES.logosmall6, delay: '0.6s',},
-    {image: IMAGES.logosmall1, delay: '0.7s',},
-    {image: IMAGES.logosmall2, delay: '0.8s',},
-    {image: IMAGES.logosmall3, delay: '0.9s',},
-    {image: IMAGES.logosmall4, delay: '1.0s',},
-    {image: IMAGES.logosmall5, delay: '1.1s',},
-    {image: IMAGES.logosmall6, delay: '1.2s',},
-]
+  { image: IMAGES.logosmall1, delay: "0.1s" },
+  { image: IMAGES.logosmall2, delay: "0.2s" },
+  { image: IMAGES.logosmall3, delay: "0.3s" },
+  { image: IMAGES.logosmall4, delay: "0.4s" },
+  { image: IMAGES.logosmall5, delay: "0.5s" },
+  { image: IMAGES.logosmall6, delay: "0.6s" },
+  { image: IMAGES.logosmall1, delay: "0.7s" },
+  { image: IMAGES.logosmall2, delay: "0.8s" },
+  { image: IMAGES.logosmall3, delay: "0.9s" },
+  { image: IMAGES.logosmall4, delay: "1.0s" },
+  { image: IMAGES.logosmall5, delay: "1.1s" },
+  { image: IMAGES.logosmall6, delay: "1.2s" },
+];
 // counter
 export const countupdata = [
-    {title: 'Specialists', delay: '0.4s', countup: 200, span: '+',},
-    {title: 'Happy Patients', delay: '0.6s', countup: 45, span: 'K',},
-    {title: 'Winning Awards', delay: '0.8s', countup: 150, span: '+',},
-]
+  { title: "Specialists", delay: "0.4s", countup: 200, span: "+" },
+  { title: "Happy Patients", delay: "0.6s", countup: 45, span: "K" },
+  { title: "Winning Awards", delay: "0.8s", countup: 150, span: "+" },
+];
 // frequently
 export const accordiondata = [
-    {
-        delay: '0.5s',
-        key: "0",
-        title: 'Combien facturez-vous pour une consultation spécialisée ?',
-        answers: 'Le tarif varie selon la spécialité et le type de prise en charge. Contactez-nous pour connaître le prix exact de votre consultation.'
-    },
-    {
-        delay: '0.6s',
-        key: "1",
-        title: 'Quels types de traitements proposez-vous ?',
-        answers: 'Nous proposons des traitements personnalisés selon la spécialité : analyses médicales, soins dentaires, examens cardiovasculaires, suivi endocrinologique, et bien plus.'
-    },
-    {
-        delay: '0.7s',
-        key: "2",
-        title: 'Comment puis-je prendre rendez-vous ?',
-        answers: 'Vous pouvez prendre rendez-vous en ligne, par téléphone ou directement à l’accueil de notre centre médical.'
-    },
-    {
-        delay: '0.8s',
-        key: "3",
-        title: 'Puis-je annuler mon rendez-vous ?',
-        answers: 'Oui, il est possible d’annuler ou de reporter votre rendez-vous au moins 24h à l’avance en nous contactant.'
-    },
+  {
+    delay: "0.5s",
+    key: "0",
+    title: "Combien facturez-vous pour une consultation spécialisée ?",
+    answers:
+      "Le tarif varie selon la spécialité et le type de prise en charge. Contactez-nous pour connaître le prix exact de votre consultation.",
+  },
+  {
+    delay: "0.6s",
+    key: "1",
+    title: "Quels types de traitements proposez-vous ?",
+    answers:
+      "Nous proposons des traitements personnalisés selon la spécialité : analyses médicales, soins dentaires, examens cardiovasculaires, suivi endocrinologique, et bien plus.",
+  },
+  {
+    delay: "0.7s",
+    key: "2",
+    title: "Comment puis-je prendre rendez-vous ?",
+    answers:
+      "Vous pouvez prendre rendez-vous en ligne, par téléphone ou directement à l’accueil de notre centre médical.",
+  },
+  {
+    delay: "0.8s",
+    key: "3",
+    title: "Puis-je annuler mon rendez-vous ?",
+    answers:
+      "Oui, il est possible d’annuler ou de reporter votre rendez-vous au moins 24h à l’avance en nous contactant.",
+  },
 ];
 
 // howitwork
 export const howitworkdata = [
-    {delay: '0.2s', icon: <i className="feather icon-clock"/>, title: 'Book an Appointment',},
-    {delay: '0.4s', icon: <i className="flaticon-list"/>, title: 'Conduct Checkup',},
-    {delay: '0.6s', icon: <i className="flaticon-stethoscope"/>, title: 'Perform Treatment',},
-    {delay: '0.8s', icon: <i className="flaticon-hand-holding-usd"/>, title: 'Prescribe & Payment',},
-]
+  {
+    delay: "0.2s",
+    icon: <i className="feather icon-clock" />,
+    title: "Book an Appointment",
+  },
+  {
+    delay: "0.4s",
+    icon: <i className="flaticon-list" />,
+    title: "Conduct Checkup",
+  },
+  {
+    delay: "0.6s",
+    icon: <i className="flaticon-stethoscope" />,
+    title: "Perform Treatment",
+  },
+  {
+    delay: "0.8s",
+    icon: <i className="flaticon-hand-holding-usd" />,
+    title: "Prescribe & Payment",
+  },
+];
 // inspirational
 export const inspirationaldata = [
-    {columnstand: 'm-r25', delay: '0.2s', title: 'Mission', svg: SVGICONS.mission},
-    {columnstand: 'm-l25', delay: '0.4s', title: 'Vision', svg: SVGICONS.vision},
-    {columnstand: 'm-r25', delay: '0.6s', title: 'Values', svg: SVGICONS.values},
-]
+  {
+    columnstand: "m-r25",
+    delay: "0.2s",
+    title: "Mission",
+    svg: SVGICONS.mission,
+  },
+  {
+    columnstand: "m-l25",
+    delay: "0.4s",
+    title: "Vision",
+    svg: SVGICONS.vision,
+  },
+  {
+    columnstand: "m-r25",
+    delay: "0.6s",
+    title: "Values",
+    svg: SVGICONS.values,
+  },
+];
 // mapwraper
 export const mapdata = [
-    {
-        id: 1,
-        delay: '0.2s',
-        icon: <i className="feather icon-map-pin"/>,
-        title: "Adresse",
-        para: <p>Patte d'oie builders Lot 4, Cite impot et domaine</p>,
-    },
-    {
-        id: 2,
-        delay: '0.4s',
-        icon: <i className="feather icon-phone"/>,
-        title: "Contact",
-        para: <p><Link href="tel:+221776600670">+221776600670</Link></p>,
-    },
-    {
-        id: 3,
-        delay: '0.6s',
-        icon: <i className="feather icon-mail"/>,
-        title: "Envoyer un email",
-        para: <p><Link href="mailto:sendocteurastuce@gmail.com">sendocteurastuce@gmail.com</Link></p>,
-    },
-    {
-        id: 4,
-        delay: '0.8s',
-        icon: <i className="feather icon-clock"/>,
-        title: "Heure d'ouverture ",
-        para: <p>Lundi-Dimanche: 8:00-00:00</p>,
-    },
-]
+  {
+    id: 1,
+    delay: "0.2s",
+    icon: <i className="feather icon-map-pin" />,
+    title: "Adresse",
+    para: <p>Patte d'oie builders Lot 4, Cite impot et domaine</p>,
+  },
+  {
+    id: 2,
+    delay: "0.4s",
+    icon: <i className="feather icon-phone" />,
+    title: "Contact",
+    para: (
+      <p>
+        <Link href="tel:+221776600670">+221776600670</Link>
+      </p>
+    ),
+  },
+  {
+    id: 3,
+    delay: "0.6s",
+    icon: <i className="feather icon-mail" />,
+    title: "Envoyer un email",
+    para: (
+      <p>
+        <Link href="mailto:sendocteurastuce@gmail.com">
+          sendocteurastuce@gmail.com
+        </Link>
+      </p>
+    ),
+  },
+  {
+    id: 4,
+    delay: "0.8s",
+    icon: <i className="feather icon-clock" />,
+    title: "Heure d'ouverture ",
+    para: <p>Lundi-Dimanche: 8:00-00:00</p>,
+  },
+];
 // meetdr
 export const meetdrdata1 = [
-    {title: 'Radiant Skin Dermatology',},
-    {title: 'Laser Resurfacing',},
-    {title: 'Flawless Dermatology',},
-    {title: 'Refined Skin Dermatology',},
-    {title: 'Luminous Dermatology',},
-    {title: 'Anti Aging',},
-]
-export const meetdrdata2 = [
-    {image: IMAGES.logo1},
-    {image: IMAGES.logo2},
-]
+  { title: "Radiant Skin Dermatology" },
+  { title: "Laser Resurfacing" },
+  { title: "Flawless Dermatology" },
+  { title: "Refined Skin Dermatology" },
+  { title: "Luminous Dermatology" },
+  { title: "Anti Aging" },
+];
+export const meetdrdata2 = [{ image: IMAGES.logo1 }, { image: IMAGES.logo2 }];
 // pricing
 export const pricingdata1 = [
-    {title: 'Cardiovascular Services',},
-    {title: 'Weight Management',},
-    {title: 'Dental Services',},
-    {title: 'Women\'s Health',},
-    {title: 'Emergency Medicine',},
-    {title: 'Family Medicine',},
-    {title: '24/7 customer support',},
-    {title: 'Video Call Support',},
-]
+  { title: "Cardiovascular Services" },
+  { title: "Weight Management" },
+  { title: "Dental Services" },
+  { title: "Women's Health" },
+  { title: "Emergency Medicine" },
+  { title: "Family Medicine" },
+  { title: "24/7 customer support" },
+  { title: "Video Call Support" },
+];
 export const pricingdata2 = [
-    {
-        delay: '0.4s', title: <h2 className="pricingtable-bx">Free<small>/ Lifetime</small></h2>,
-        feature: <ul className="pricingtable-features">
-            <li><Image src={IMAGES.Check} alt=""/></li>
-            <li><Image src={IMAGES.Check} alt=""/></li>
-            <li><Image src={IMAGES.Check} alt=""/></li>
-            <li className="disable"><Image src={IMAGES.Check} alt=""/></li>
-            <li className="disable"><Image src={IMAGES.Check} alt=""/></li>
-            <li className="disable"><Image src={IMAGES.Check} alt=""/></li>
-            <li className="disable"><Image src={IMAGES.Check} alt=""/></li>
-            <li className="disable"><Image src={IMAGES.Check} alt=""/></li>
-        </ul>,
-    },
-    {
-        delay: '0.6s', coloumnstand: 'active', title: <h2 className="pricingtable-bx">$25<small>/ Month</small></h2>,
-        feature: <ul className="pricingtable-features">
-            <li><Image src={IMAGES.Check} alt=""/></li>
-            <li><Image src={IMAGES.Check} alt=""/></li>
-            <li><Image src={IMAGES.Check} alt=""/></li>
-            <li><Image src={IMAGES.Check} alt=""/></li>
-            <li><Image src={IMAGES.Check} alt=""/></li>
-            <li className="disable"><Image src={IMAGES.Check} alt=""/></li>
-            <li className="disable"><Image src={IMAGES.Check} alt=""/></li>
-            <li className="disable"><Image src={IMAGES.Check} alt=""/></li>
-        </ul>,
-    },
-    {
-        delay: '0.8s', title: <h2 className="pricingtable-bx">$40<small>/ Month</small></h2>,
-        feature: <ul className="pricingtable-features">
-            <li><Image src={IMAGES.Check} alt=""/></li>
-            <li><Image src={IMAGES.Check} alt=""/></li>
-            <li><Image src={IMAGES.Check} alt=""/></li>
-            <li><Image src={IMAGES.Check} alt=""/></li>
-            <li><Image src={IMAGES.Check} alt=""/></li>
-            <li><Image src={IMAGES.Check} alt=""/></li>
-            <li><Image src={IMAGES.Check} alt=""/></li>
-            <li><Image src={IMAGES.Check} alt=""/></li>
-        </ul>,
-    },
-]
+  {
+    delay: "0.4s",
+    title: (
+      <h2 className="pricingtable-bx">
+        Free<small>/ Lifetime</small>
+      </h2>
+    ),
+    feature: (
+      <ul className="pricingtable-features">
+        <li>
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li>
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li>
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li className="disable">
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li className="disable">
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li className="disable">
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li className="disable">
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li className="disable">
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+      </ul>
+    ),
+  },
+  {
+    delay: "0.6s",
+    coloumnstand: "active",
+    title: (
+      <h2 className="pricingtable-bx">
+        $25<small>/ Month</small>
+      </h2>
+    ),
+    feature: (
+      <ul className="pricingtable-features">
+        <li>
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li>
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li>
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li>
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li>
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li className="disable">
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li className="disable">
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li className="disable">
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+      </ul>
+    ),
+  },
+  {
+    delay: "0.8s",
+    title: (
+      <h2 className="pricingtable-bx">
+        $40<small>/ Month</small>
+      </h2>
+    ),
+    feature: (
+      <ul className="pricingtable-features">
+        <li>
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li>
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li>
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li>
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li>
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li>
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li>
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+        <li>
+          <Image src={IMAGES.Check} alt="" />
+        </li>
+      </ul>
+    ),
+  },
+];
 // raelpatient
 export const testiswipeerdata = [
-    {image: IMAGES.testimonial1, name: "Aminata koita"},
-    {image: IMAGES.testimonial2, name: "Fama Abdullah"},
-    {image: IMAGES.testimonial3, name: "Fadel Gueye"},
-]
+  {
+    image: IMAGES.testimonial1,
+    name: "Aminata Koita",
+    title: "Patiente en endocrinologie",
+    comment:
+      "Grâce à un suivi personnalisé, mon diabète est désormais bien équilibré. Je remercie toute l'équipe pour son professionnalisme et sa bienveillance.",
+  },
+  {
+    image: IMAGES.testimonial2,
+    name: "Fama Abdullah",
+    title: "Patiente en endocrinologie",
+    comment:
+      "Après plusieurs années de troubles de la thyroïde, j'ai enfin trouvé une prise en charge adaptée. Les résultats ont dépassé mes attentes.",
+  },
+  {
+    image: IMAGES.testimonial3,
+    name: "Fadel Gueye",
+    title: "Patient en neurologie",
+    comment:
+      "Mes migraines chroniques ont considérablement diminué grâce à un diagnostic précis et un traitement efficace. Je recommande vivement cette clinique.",
+  },
+];
 // servicebox
 export const serviceboxdata = [
-    {
-        id: 1,
-        delay: '0.1s',
-        title: 'Biopsie cytoponction',
-        desc: 'Prélèvement cellulaire pour un diagnostic rapide et précis.',
-        svg1: SVGICONS.iconcell1,
-        svg2: SVGICONS.iconbg1,
-    },
-    {
-        id: 2,
-        delay: '0.2s',
-        title: 'Cardiologie',
-        desc: 'Prise en charge complète des maladies du cœur et des vaisseaux.',
-        svg1: SVGICONS.iconcell2,
-        svg2: SVGICONS.iconbg2,
-    },
-    {
-        id: 3,
-        delay: '0.3s',
-        title: 'Médecine Dentaire',
-        desc: 'Soins dentaires, prévention et traitement des affections bucco-dentaires.',
-        svg1: SVGICONS.iconcell3,
-        svg2: SVGICONS.iconbg3,
-    },
-    {
-        id: 4,
-        delay: '0.4s',
-        title: 'Endocrinologie',
-        desc: 'Diagnostic et traitement des troubles hormonaux et métaboliques.',
-        svg1: SVGICONS.iconcell4,
-        svg2: SVGICONS.iconbg4,
-    },
-    {
-        id: 5,
-        delay: '0.5s',
-        title: 'Ophtalmologie',
-        desc: 'Soins de la vue, dépistage et traitement des pathologies oculaires.',
-        svg1: SVGICONS.iconcell5,
-        svg2: SVGICONS.iconbg5,
-    },
-    {
-        id: 6,
-        delay: '0.6s',
-        title: 'Neurologie',
-        desc: 'Évaluation et traitement des maladies du système nerveux.',
-        svg1: SVGICONS.iconcell6,
-        svg2: SVGICONS.iconbg6,
-    },
-    {
-        id: 7,
-        delay: '0.7s',
-        title: 'Orthopédie',
-        desc: 'Prise en charge des troubles osseux, articulaires et musculaires.',
-        svg1: SVGICONS.iconcell7,
-        svg2: SVGICONS.iconbg7,
-    },
-    {
-        id: 8,
-        delay: '0.8s',
-        title: 'Analyse biologique',
-        desc: 'Analyses médicales pour le diagnostic et le suivi thérapeutique.',
-        svg1: SVGICONS.iconcell8,
-        svg2: SVGICONS.iconbg8,
-    },
+  {
+    id: 1,
+    delay: "0.4s",
+    title: "Endocrinologie",
+    desc: "Diagnostic et traitement des troubles hormonaux et métaboliques.",
+    svg1: SVGICONS.iconcell4,
+    svg2: SVGICONS.iconbg4,
+  },
+  {
+    id: 2,
+    delay: "0.2s",
+    title: "Cardiologie",
+    desc: "Prise en charge complète des maladies du cœur et des vaisseaux.",
+    svg1: SVGICONS.iconcell2,
+    svg2: SVGICONS.iconbg2,
+  },
+  {
+    id: 3,
+    delay: "0.8s",
+    title: "Analyse biologique",
+    desc: "Analyses médicales pour le diagnostic et le suivi thérapeutique.",
+    svg1: SVGICONS.iconcell8,
+    svg2: SVGICONS.iconbg8,
+  },
+
+  {
+    id: 5,
+    delay: "0.5s",
+    title: "Ophtalmologie",
+    desc: "Soins de la vue, dépistage et traitement des pathologies oculaires.",
+    svg1: SVGICONS.iconcell5,
+    svg2: SVGICONS.iconbg5,
+  },
+  {
+    id: 6,
+    delay: "0.6s",
+    title: "Neurologie",
+    desc: "Évaluation et traitement des maladies du système nerveux.",
+    svg1: SVGICONS.iconcell6,
+    svg2: SVGICONS.iconbg6,
+  },
+  {
+    id: 7,
+    delay: "0.7s",
+    title: "Orthopédie",
+    desc: "Prise en charge des troubles osseux, articulaires et musculaires.",
+    svg1: SVGICONS.iconcell7,
+    svg2: SVGICONS.iconbg7,
+  },
+  {
+    id: 8,
+    delay: "0.3s",
+    title: "Médecine Dentaire",
+    desc: "Soins dentaires, prévention et traitement des affections bucco-dentaires.",
+    svg1: SVGICONS.iconcell3,
+    svg2: SVGICONS.iconbg3,
+  },
+  {
+    id: 4,
+    delay: "0.1s",
+    title: "Biopsie cytoponction",
+    desc: "Prélèvement cellulaire pour un diagnostic rapide et précis.",
+    svg1: SVGICONS.iconcell1,
+    svg2: SVGICONS.iconbg1,
+  },
 ];
 
 // sidebar
 export const tagdata = [
-    {title: 'Acupressure', num: '(10)',},
-    {title: 'Allgemein', num: '(5)',},
-    {title: 'Blood', num: '(17)',},
-    {title: 'Food', num: '(13)',},
-    {title: 'Health', num: '(06)',},
-    {title: 'Mental Health', num: '(17)',},
-    {title: 'Therapy', num: '(13)',},
-    {title: 'Walking', num: '(06)',},
-]
+  { title: "Acupressure", num: "(10)" },
+  { title: "Allgemein", num: "(5)" },
+  { title: "Blood", num: "(17)" },
+  { title: "Food", num: "(13)" },
+  { title: "Health", num: "(06)" },
+  { title: "Mental Health", num: "(17)" },
+  { title: "Therapy", num: "(13)" },
+  { title: "Walking", num: "(06)" },
+];
 export const sidebarpostdata = [
-    {date: "10 June 2025", image: IMAGES.blogsmall1, title: "The Art of Managing Business and Patient Care"},
-    {date: "13 June 2025", image: IMAGES.blogsmall2, title: "The New Face of Care Blending Empathy with Expertise"},
-    {date: "17 June 2025", image: IMAGES.blogsmall3, title: "Here Care Expertise Elevating the Patient Experience"},
-]
+  {
+    date: "10 June 2025",
+    image: IMAGES.blogsmall1,
+    title: "The Art of Managing Business and Patient Care",
+  },
+  {
+    date: "13 June 2025",
+    image: IMAGES.blogsmall2,
+    title: "The New Face of Care Blending Empathy with Expertise",
+  },
+  {
+    date: "17 June 2025",
+    image: IMAGES.blogsmall3,
+    title: "Here Care Expertise Elevating the Patient Experience",
+  },
+];
 // whychoose
 export const whychoosedata = [
-    {delay: '0.4s', title: 'More Experience',},
-    {delay: '0.6s', title: 'Seamless care',},
-    {delay: '0.8s', title: 'The right answers?',},
-    {delay: '1.0s', title: 'Unparalleled expertise',},
-]
+  { delay: "0.4s", title: "More Experience" },
+  { delay: "0.6s", title: "Seamless care" },
+  { delay: "0.8s", title: "The right answers?" },
+  { delay: "1.0s", title: "Unparalleled expertise" },
+];
 // worldclass
 export const worldclasslistdata = [
-    {title: 'Comprehensive Specialties',},
-    {title: 'Research and Development',},
-    {title: 'Emergency Services',},
-    {title: 'Advanced Imaging Services',},
-    {title: 'Intensive Care Units (ICUs)',},
-    {title: 'Rehabilitation Services',},
-    {title: 'Telemedicine Facilities',},
-    {title: 'Patient-Centric Approach',},
-    {title: 'Multidisciplinary Team',},
-    {title: 'Health Information Technology',},
-]
-
+  { title: "Comprehensive Specialties" },
+  { title: "Research and Development" },
+  { title: "Emergency Services" },
+  { title: "Advanced Imaging Services" },
+  { title: "Intensive Care Units (ICUs)" },
+  { title: "Rehabilitation Services" },
+  { title: "Telemedicine Facilities" },
+  { title: "Patient-Centric Approach" },
+  { title: "Multidisciplinary Team" },
+  { title: "Health Information Technology" },
+];
